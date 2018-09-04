@@ -1,0 +1,12 @@
+.centreText {
+    text-align: center;
+}
+
+h1 {
+    font-size: 150px;
+}
+
+/*
+ This code will apply a font size of 150px to all h1 tags and those tags that 
+ have a className of centreText will be centre aligned.
+ */
