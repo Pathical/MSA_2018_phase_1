@@ -1,6 +1,8 @@
+import CircularProgress from '@material-ui/core/CircularProgress';
+import purple from '@material-ui/core/colors/purple';
 import * as React from 'react';
 import Dropzone from 'react-dropzone';
-import Loader from 'react-loader-spinner';
+// import Loader from 'react-loader-spinner';
 import './App.css';
 
 
@@ -71,7 +73,7 @@ export default class App extends React.Component<{}, IState > {
         this.setState({results: response.statusText})
       }
       else {
-        response.json().then((data:any) => this.setState({results: data[0].class}))
+        response.json().then((data: any) => this.setState({results: data[0].class}))
       }
       return response
     })
@@ -107,7 +109,8 @@ export default class App extends React.Component<{}, IState > {
           <div  className="dank">
           {
             this.state.results === "" && this.state.imageFiles.length > 0 ?
-            <Loader type="TailSpin" color="#00BFFF" height={80} width={80}/> :
+            // <Loader type="TailSpin" color="#00BFFF" height={80} width={80}/> :
+            <CircularProgress size={50} style={{ color: purple[500] }} thickness={7}/> :
             <p>{this.state.results}</p>
           }
           </div>
