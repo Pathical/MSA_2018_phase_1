@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import './App.css';
-import FirstComponent from './components/FirstComponent';
+import WeatherForADay from './components/WeatherForADay';
 
 
 interface IState {
@@ -30,9 +30,10 @@ export default class App extends React.Component<{}, IState> {
     fetch('https://api.weatherbit.io/v2.0/forecast/daily?key=e7739c749efd4516afe5091f2010478b&days=1&city=' + cityName, {
       method: 'GET'
     }).then((response: any) => {
-      if (!response.ok){
+
+      if (response.status !== 200){
         this.setState({
-          error: 'An error occured, polease try again later',
+          error: 'An error occured, please try again later, or check your spelling.',
           result: ''
         });
       } else {
@@ -42,7 +43,7 @@ export default class App extends React.Component<{}, IState> {
             result: responseBody
           });
         })
-      }
+      } 
     });
   }
 
@@ -56,11 +57,8 @@ export default class App extends React.Component<{}, IState> {
             onKeyPress={this.handleOnChange}
           />
         </div>
-        <div>
-          {this.state.result.country_code}
-        </div>
-        <FirstComponent />
-
+        {this.state.result === '' ? '' : <WeatherForADay dataForThisDay={this.state.result.data[0]} cityName={this.state.result.city_name} countryCode={this.state.result.country_code} />}
+        {this.state.error === '' ? '' : this.state.error}
       </div>
 
     );
