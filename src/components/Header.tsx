@@ -1,7 +1,7 @@
-import {AppBar, IconButton, Toolbar, Typography} from '@material-ui/core/';
+import {AppBar, Toolbar, Typography} from '@material-ui/core/';
 import purple from '@material-ui/core/colors/purple';
 import yellow from '@material-ui/core/colors/yellow';
-import MenuIcon from '@material-ui/icons/Menu';
+// import MenuIcon from '@material-ui/icons/Menu';
 import * as React from 'react';
 // import { Nav, Navbar, NavItem } from 'react-bootstrap';
 // import { IndexLinkContainer } from "react-router-bootstrap";
@@ -12,14 +12,14 @@ export const Header: React.StatelessComponent<{}> = () => {
     return (
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton  aria-label="Menu" color="inherit">
+                    {/* <IconButton  aria-label="Menu" color="inherit">
                         <MenuIcon aria-haspopup="true"/>
-                    </IconButton>
+                    </IconButton> */}
 
                     <Typography variant="display2" color="inherit">
-                        <Link style={{color: "white"}} to="/">dankNotDank</Link>
-                        <Link style={{color: purple.A200}} to="/FirstComponent"> Page 1 </Link>
-                        <Link style={{color: yellow.A200}} to="/SecondComponent"> Page 2 </Link>
+                        <Link style={{color: "white"}} to="/">Language Detector</Link>
+                        <Link style={{color: purple.A200}} to="/FirstComponent"> meme1 </Link>
+                        <Link style={{color: yellow.A200}} to="/SecondComponent"> meme2 </Link>
                     </Typography>
                 </Toolbar>
             </AppBar>

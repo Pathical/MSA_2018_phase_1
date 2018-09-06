@@ -3,11 +3,11 @@
 }
 
 /*
- This code will apply a font size of 150px to all h1 tags and those tags that 
+ This code will apply a font size of 100px to all h1 tags and those tags that 
  have a className of centreText will be centre aligned.
  */
 h1 {
-    font-size: 150px;
+    font-size: 100px;
 }
 
 /*
@@ -29,4 +29,9 @@ padding-bottom: 9px;
 
 .dank {
 padding-top: 20px;
+}
+
+.poo {
+    margin-top: 40px;
+    margin-left: 100px;
 }
