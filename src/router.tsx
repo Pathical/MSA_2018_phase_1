@@ -5,6 +5,7 @@ import FirstComponent from './components/FirstComponent';
 import { Header } from './components/Header';
 import SecondComponent from './components/SecondComponent';
 import './css/styles.css';
+
 // What are components in react ?
 // Components let you split the UI into independent, reusable pieces, 
 // and think about each piece in isolation. 
