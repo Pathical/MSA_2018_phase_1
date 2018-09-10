@@ -10,19 +10,29 @@ h1 {
     font-size: 150px;
 }
 
-.centerStuff{
-    align-items: center;
+#root .MuiPaper-elevation1-12 {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(1, 1, 1, 1), 0.5px 0.5px 0.5px 0.5px rgba(1, 1, 1, 1), 0.5px 0.5px 0.5px 0.5px rgba(1, 1, 1, 1);
 }
 
 .weatherCard {
-    font-family: "Arial";
-    padding-top: 50px;
     margin: auto;
+    padding-top: 5px;
     text-align: center;
-    min-width: 200px;
-    max-width : 400px;
-    min-height: 200px;
+    min-width: 280px;
+    max-width : 250px;
+    min-height: 370px;
     max-height: 500px;
+    
+}
+
+footer{
+    position: relative;
+    clear: both;
+}
+.col-xs-1 {
+    width: auto;
+    padding: 5px 5px 5px 5px;
+
 }
 /*
 What this does is that it gives some very basic UI to the dropzone. 
