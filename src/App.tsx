@@ -16,12 +16,16 @@ export default class App extends React.Component<{}, IState> {
     this.handleOnChange = this.handleOnChange.bind(this);
   }
 
+  // this function gets called everytime the user presses a key
+  // when the key is the enter key, it calls the function which calls the api
   public handleOnChange(event: any) {
     if (event.key === 'Enter') {
       this.getWeatherbyCityName(event.target.value);
     }
   }
 
+  // this function makes the RESTful API call to weatherbit
+  // and tries to store the results as states
   public getWeatherbyCityName(cityName: any) {
     fetch('https://api.weatherbit.io/v2.0/forecast/daily?key=e7739c749efd4516afe5091f2010478b&days=' + this.state.days + '&city=' + cityName, {
       method: 'GET'
@@ -42,6 +46,7 @@ export default class App extends React.Component<{}, IState> {
     });
   }
 
+  // creates an array of WeatherForADay objects
   public createCard = () => {
     const cards = []
     for (let i = 0; i < this.state.days; i++) {
